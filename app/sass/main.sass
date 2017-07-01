@@ -1,0 +1,46 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+/*GENERAL RESET START*/
+body
+	margin: 0 auto
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	background-color: $accent
+
+h1, h2, h3, h4, h5, h6, p
+	margin: 0
+
+a
+	color: #000;
+	text-decoration: none
+	&hover,
+	&focus,
+	&active,
+	&visited
+		text-decoration: none
+ul, ol
+	margin: 0
+	padding: 0
+ul
+	list-style: none
+
+img
+	max-width: 100%
+	border: none
+
+input, button, textarea
+	border: none
+	outline: none
+
+textarea
+	resize: vertical
+
+input[type="submit"], button
+	cursor: pointer
+
+/*GENERAL RESET END*/
