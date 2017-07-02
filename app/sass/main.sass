@@ -1,16 +1,17 @@
 @import "fonts"
-@import "libs"
 @import "vars"
+@import "libs"
 
 /*GENERAL RESET START*/
 body
 	margin: 0 auto
-	font-size: 16px
+	font-size: 14px
 	min-width: 320px
+	max-width: 1440px
 	position: relative
-	line-height: 1.75
 	font-family: $default-font
 	background-color: $accent
+	height: 2000px
 
 h1, h2, h3, h4, h5, h6, p
 	margin: 0
@@ -44,3 +45,87 @@ input[type="submit"], button
 	cursor: pointer
 
 /*GENERAL RESET END*/
+
+.clearfix::after
+	content: ""
+	clear: both
+	display: block
+
+.wrapper
+	max-width: 1170px
+	margin: 0 auto
+	height: inherit
+
+
+/* header start */
+
+.topline
+	background-color: $accent
+	.logo
+		font-family: "lobster"
+		font-size: 43px
+		float: left
+		margin:
+			top: 32px
+			bottom: 29px
+			left: 135px
+		a
+			display: block
+			height: 39px
+			width: 120px
+			color: $logo
+			line-height: 35px
+	.nav
+		float: right
+		margin:
+			right: 136px
+		li
+			float: left
+			&.active, &:hover
+				border-bottom: 3px solid $blue
+				background-color: #f8f9fb
+			a
+				display: block
+				height: 17px
+				font-size: 15px
+				padding:
+					top: 44px
+					right: 25px
+					left: 25px
+					bottom: 36px
+.item
+	background-color: $banner
+	.banner 
+		height: 566px
+		background-image: url(../img/banner-img.jpg)
+		background-size: cover
+		background-position: center
+		text-align: center
+		.content
+			padding-top: 139px
+			h1
+				font-size: 65px
+				font-family: "openSanss"
+				color: $accent
+				text-shadow: 1px 1px rgba(0,0,0,0.2)
+			span
+				display: block
+				font-size: 23px
+				line-height: 37px
+				color: $accent
+				margin-top: 30px
+			.button-banner
+				box-sizing: border-box
+				margin:
+					top: 57px
+					left: auto
+					right: auto
+				padding:
+					top: 15px
+					bottom: 15px
+				width: 231px
+				height: 69px
+				border: 3px solid $accent
+				border-radius: 8px
+				font-size: 26px
+				color: $accent
