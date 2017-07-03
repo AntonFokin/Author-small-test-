@@ -11,7 +11,7 @@ body
 	position: relative
 	font-family: $default-font
 	background-color: $accent
-	height: 2000px
+	height: 3000px
 
 h1, h2, h3, h4, h5, h6, p
 	margin: 0
@@ -80,6 +80,7 @@ input[type="submit"], button
 		margin:
 			right: 136px
 		li
+			transition: background-color .5s ease
 			float: left
 			&.active, &:hover
 				border-bottom: 3px solid $blue
@@ -93,39 +94,165 @@ input[type="submit"], button
 					right: 25px
 					left: 25px
 					bottom: 36px
-.item
-	background-color: $banner
-	.banner 
-		height: 566px
-		background-image: url(../img/banner-img.jpg)
-		background-size: cover
-		background-position: center
-		text-align: center
-		.content
-			padding-top: 139px
-			h1
-				font-size: 65px
-				font-family: "openSanss"
-				color: $accent
-				text-shadow: 1px 1px rgba(0,0,0,0.2)
+#section-banner
+	.item
+		background-color: $banner
+		.banner 
+			height: 566px
+			background-image: url(../img/banner-img.jpg)
+			background-size: cover
+			background-position: center
+			text-align: center
+			.content
+				padding-top: 139px
+				h1
+					font-size: 65px
+					font-family: "openSanss"
+					color: $accent
+					text-shadow: 1px 1px rgba(0,0,0,0.2)
+				span
+					display: block
+					font-size: 23px
+					line-height: 37px
+					color: $accent
+					margin-top: 30px
+				.button-banner
+					box-sizing: border-box
+					transition: all .5s ease
+					margin:
+						top: 57px
+						left: auto
+						right: auto
+					width: 231px
+					height: 69px
+					border: 3px solid $accent
+					border-radius: 8px
+					font-size: 26px
+					a
+						display: block
+						padding:
+							top: 15px
+							bottom: 15px
+						color: $accent
+					&:hover
+						background-color: $accent
+						a
+							color: $blue
+	.owl-nav
+		position: absolute
+		top: 287px
+		width: 100%
+		>div
+			height: 51px
+			width: 51px
+			background-color: $accent
+			line-height: 51px
+			text-align: center
+			border-radius: 50%
+			font-size: 50px
+			color: $blue
+			margin:
+				left: 29px
+				right: 29px
+		.owl-prev
+			float: left
+		.owl-next
+			float: right
+
+#section-team
+	text-align: center
+	color: $team-color
+	padding:
+		top: 80px
+		bottom: 107px
+	h2
+		font-size: 42px
+	.team
+		margin-top: 100px
+		display: flex
+		justify-content: space-around
+		.expert
+			height: 414px
+			width: 247px
+			.foto
+				height: 201px
+				width: 201px
+				border-radius: 50%
+				background-color: #eeeef0
+				margin: 0 auto
+				
+				.fa
+					opacity: 0
+					font-size: 51px
+					line-height: 201px
+					color: #f46d6d
+					transition: all .5s ease
+				&:hover
+					.fa
+						opacity: 1
+			h3
+				margin-top: 50px
+				font-size: 22px
 			span
-				display: block
-				font-size: 23px
-				line-height: 37px
-				color: $accent
-				margin-top: 30px
-			.button-banner
-				box-sizing: border-box
-				margin:
-					top: 57px
-					left: auto
-					right: auto
-				padding:
-					top: 15px
-					bottom: 15px
-				width: 231px
-				height: 69px
-				border: 3px solid $accent
-				border-radius: 8px
+				font-size: 14px
+				line-height: 24px
+			p
+				font-size: 14px
+				line-height: 26px
+				margin-top: 35px
+
+#section-plans
+	background-color: #f1f1f1
+
+	.plans
+		display: flex
+		justify-content: space-around
+		text-align: center
+		padding:
+			top: 118px
+			bottom: 100px
+		.plan
+			height: 525px
+			width: 370px
+		.head
+			height: 145px
+			background-color: #f9f9fc	
+			h3
+				height: 76px
+				background-color: #475460
+				border-radius: 3px 3px 0 0
 				font-size: 26px
+				line-height: 76px
 				color: $accent
+			span
+				font-size: 20px
+				line-height: 69px
+				color: #485460
+		ul
+			background-color: $accent
+			color: #8c9299
+			li
+				height: 45px
+				line-height: 45px
+				border-top: 1px solid #ecf0ff
+			li:last-child
+				border-bottom: 1px solid #ecf0f1
+		.foot
+			height: 99px
+			background-color: #f8f9fb
+			padding-top: 29px
+			box-sizing: border-box
+			.button-plan
+				width: 170px
+				height: 40px
+				background-color: #788492
+				margin: 0 auto
+				line-height: 40px
+				border-radius: 3px
+				font-size: 17px
+				color: $accent
+				font-family: "openSanss"
+		.button-plan:hover
+			background-color: $blue
+			.head
+				background-color: $blue
