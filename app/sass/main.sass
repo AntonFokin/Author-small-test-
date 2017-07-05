@@ -10,8 +10,8 @@ body
 	max-width: 1440px
 	position: relative
 	font-family: $default-font
+	line-height: 14px
 	background-color: $accent
-	height: 3000px
 
 h1, h2, h3, h4, h5, h6, p
 	margin: 0
@@ -68,7 +68,7 @@ input[type="submit"], button
 		margin:
 			top: 32px
 			bottom: 29px
-			left: 135px
+			left: 120px
 		a
 			display: block
 			height: 39px
@@ -78,7 +78,7 @@ input[type="submit"], button
 	.nav
 		float: right
 		margin:
-			right: 136px
+			right: 120px
 		li
 			transition: background-color .5s ease
 			float: left
@@ -87,52 +87,49 @@ input[type="submit"], button
 				background-color: #f8f9fb
 			a
 				display: block
-				height: 17px
 				font-size: 15px
 				padding:
-					top: 44px
 					right: 25px
 					left: 25px
-					bottom: 36px
+				line-height: 97px
 #section-banner
 	.item
-		background-color: $banner
 		.banner 
-			height: 566px
 			background-image: url(../img/banner-img.jpg)
 			background-size: cover
 			background-position: center
 			text-align: center
 			.content
-				padding-top: 139px
+				padding:
+					top: 139px
+					bottom: 149px
 				h1
 					font-size: 65px
 					font-family: "openSanss"
+					line-height: 75px
 					color: $accent
 					text-shadow: 1px 1px rgba(0,0,0,0.2)
+					margin-bottom: 30px
 				span
 					display: block
 					font-size: 23px
 					line-height: 37px
 					color: $accent
-					margin-top: 30px
+					margin-bottom: 60px
 				.button-banner
 					box-sizing: border-box
 					transition: all .5s ease
 					margin:
-						top: 57px
 						left: auto
 						right: auto
 					width: 231px
-					height: 69px
 					border: 3px solid $accent
 					border-radius: 8px
 					font-size: 26px
+					font-family: "openSanss"
+					line-height: 62px
 					a
 						display: block
-						padding:
-							top: 15px
-							bottom: 15px
 						color: $accent
 					&:hover
 						background-color: $accent
@@ -143,21 +140,27 @@ input[type="submit"], button
 		top: 287px
 		width: 100%
 		>div
-			height: 51px
-			width: 51px
-			background-color: $accent
-			line-height: 51px
-			text-align: center
-			border-radius: 50%
-			font-size: 50px
-			color: $blue
-			margin:
-				left: 29px
-				right: 29px
+				position: relative
+				height: 51px
+				width: 51px
+				background-color: $accent
+				line-height: 20px
+				border-radius: 50%
+				font-size: 49px
+				color: $blue
+				margin:
+					left: 29px
+					right: 29px
+				i
+					position: absolute
 		.owl-prev
 			float: left
+			i
+				right: 20px			
 		.owl-next
 			float: right
+			i
+				right: 15px	
 
 #section-team
 	text-align: center
@@ -167,10 +170,12 @@ input[type="submit"], button
 		bottom: 107px
 	h2
 		font-size: 42px
+		font-weight: 400
 	.team
 		margin-top: 100px
 		display: flex
 		justify-content: space-around
+		flex-wrap: wrap
 		.expert
 			height: 414px
 			width: 247px
@@ -193,6 +198,8 @@ input[type="submit"], button
 			h3
 				margin-top: 50px
 				font-size: 22px
+				font-weight: 400
+				line-height: 24px
 			span
 				font-size: 14px
 				line-height: 24px
@@ -207,6 +214,7 @@ input[type="submit"], button
 	.plans
 		display: flex
 		justify-content: space-around
+		flex-wrap: wrap
 		text-align: center
 		padding:
 			top: 118px
@@ -243,6 +251,7 @@ input[type="submit"], button
 			padding-top: 29px
 			box-sizing: border-box
 			.button-plan
+				display: block;
 				width: 170px
 				height: 40px
 				background-color: #788492
@@ -254,5 +263,86 @@ input[type="submit"], button
 				font-family: "openSanss"
 		.button-plan:hover
 			background-color: $blue
+			cursor: pointer
 			.head
 				background-color: $blue
+#contact-us
+	height: 688px
+	background-image: url(../img/contact-us.jpg)
+	background-size: cover
+	background-position: center
+	padding-top: 107px
+	h2
+		font-size: 42px
+		color: $accent
+		text-align: center
+		font-weight: 400
+	.row
+		margin-top: 115px
+		display: flex
+		.touch-us
+			width: 430px
+			h3
+				font-size: 24px
+				font-weight: 400
+				line-height: 50px
+				color: $accent
+			p:first-of-type
+				font-size: 14px
+				line-height: 21px
+				color: $team-color
+				opacity: 50%
+			.social
+				margin-top: 40px
+				&> div
+					display: inline-block
+					width: 42px
+					height: 42px
+					border-radius: 50%
+					text-align: center
+					line-height: 44px
+					font-size: 24px
+					a
+						color: $accent
+				&>div+div
+					margin-left: 15px
+
+				.fb
+					background-color: #3b5997
+				.tw
+					background-color: #3ec2f3
+				.g
+					background-color: #e44c41
+			p:last-child
+				margin-top: 22px
+				span
+					font-family: "MyriadPro"
+					font-size: 14px
+					line-height: 24px
+					color: #bface2
+				.num
+					text-transform: uppercase
+					font-family: $default-font
+		form
+			input
+				background-color: $accent
+				display: inline-block
+				border-radius: 2px
+				width: 270px
+				height: 44px
+				padding: 20px
+				box-sizing: border-box
+			[name= email]
+				margin-left: 29px
+			[type= textarea]
+				display: block
+				margin-top: 30px
+				width: 572px
+				height: 179px
+
+
+
+
+
+@import "media"
+

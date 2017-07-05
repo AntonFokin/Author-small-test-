@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
 	<title>Author</title>
+	<meta charset="UTF-8">	
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
@@ -11,14 +12,15 @@
 		<div class="topline">
 			<div class="wrapper clearfix">
 				<div class="logo"><a href="#">Author</a></div>
+
 				<div class="nav">
 					<ul>
 						<li class="active"><a href="#">Home</a></li>
-						<li><a href="section-plans">Service</a></li>
+						<li><a href="#section-plans">Service</a></li>
 						<li><a href="#">Portfolio</a></li>
 						<li><a href="#section-team">Team</a></li>
 						<li><a href="#">Blog</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="#contact-us">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -104,7 +106,7 @@
 						<li>Prnare nisi pretium.</li>
 					</ul>
 					<div class="foot">
-						<div class="button-plan">Buy now</div>
+						<a href="#" class="button-plan">Buy now</a>
 					</div>
 				</div>
 				<div class="plan">
@@ -121,7 +123,7 @@
 						<li>Prnare nisi pretium.</li>
 					</ul>
 					<div class="foot">
-						<div class="button-plan">Buy now</div>
+						<a href="#" class="button-plan">Buy now</a>
 					</div>
 				</div>
 				<div class="plan">
@@ -138,12 +140,36 @@
 						<li>Prnare nisi pretium.</li>
 					</ul>
 					<div class="foot">
-						<div class="button-plan">Buy now</div>
+						<a href="#" class="button-plan">Buy now</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<footer id="contact-us">
+		<div class="wrapper">
+			<h2>Contact Us</h2>
+			<div class="row">
+				<div class="touch-us">
+					<h3>Get in tuoch with us</h3>
+					<p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry`s</p>
+					<div class="social">
+						<div class="fb"><a href="https://www.facebook.com/anton.fokin.505"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+						<div class="tw"><a href="https://twitter.com/?lang=ru"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+						<div class="g"><a href="https://plus.google.com/?hl=ru"><i class="fa fa-google-plus" aria-hidden="true"></i></a></div>
+					</div>
+					<p><span>Posted by Dospel & GanjaParker</span><br><span class= "num">+xx-xxxx - xxxx - xx</span><br><span>info@mail.com</span></p>
+				</div>
+				<form action="#">
+					<input type="text" placeholder="Name" name="name" required>
+					<input type="text" placeholder="Email" name="email" required>
+					<input type="textarea" placeholder="Message" name="message" id="message" required>
+					<input type="submit" value="SEND">
+				</form>
+			</div>
+		</div>
+	</footer>
 	<script src="js/libs.min.js"></script>
 	<script src="js/common.js"></script>
 </body>
