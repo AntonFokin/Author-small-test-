@@ -56,7 +56,12 @@ input[type="submit"], button
 	margin: 0 auto
 	height: inherit
 
-
+.fixed
+	position: fixed
+	top: -5px 
+	left: 0
+	width: 100%
+	z-index: 999
 /* header start */
 
 .topline
@@ -171,6 +176,7 @@ input[type="submit"], button
 	h2
 		font-size: 42px
 		font-weight: 400
+		line-height: 42px
 	.team
 		margin-top: 100px
 		display: flex
@@ -220,11 +226,11 @@ input[type="submit"], button
 			top: 118px
 			bottom: 100px
 		.plan
-			height: 525px
 			width: 370px
 		.head
 			height: 145px
-			background-color: #f9f9fc	
+			background-color: #f9f9fc
+
 			h3
 				height: 76px
 				background-color: #475460
@@ -232,6 +238,10 @@ input[type="submit"], button
 				font-size: 26px
 				line-height: 76px
 				color: $accent
+				transition: all .5s ease
+			.button-active
+				background-color: $blue
+				cursor: pointer
 			span
 				font-size: 20px
 				line-height: 69px
@@ -261,25 +271,27 @@ input[type="submit"], button
 				font-size: 17px
 				color: $accent
 				font-family: "openSanss"
-		.button-plan:hover
-			background-color: $blue
-			cursor: pointer
-			.head
+				transition: all .5s ease
+			.button-active:hover
 				background-color: $blue
+				cursor: pointer
 #contact-us
-	height: 688px
 	background-image: url(../img/contact-us.jpg)
 	background-size: cover
 	background-position: center
-	padding-top: 107px
+	padding:
+		top: 107px
+		bottom: 98px
 	h2
 		font-size: 42px
 		color: $accent
 		text-align: center
 		font-weight: 400
+		line-height: 42px
+		margin-bottom: 115px
 	.row
-		margin-top: 115px
 		display: flex
+		flex-wrap: wrap
 		.touch-us
 			width: 430px
 			h3
@@ -294,7 +306,7 @@ input[type="submit"], button
 				opacity: 50%
 			.social
 				margin-top: 40px
-				&> div
+				li
 					display: inline-block
 					width: 42px
 					height: 42px
@@ -302,9 +314,11 @@ input[type="submit"], button
 					text-align: center
 					line-height: 44px
 					font-size: 24px
+					overflow: hidden
 					a
 						color: $accent
-				&>div+div
+						display: block
+				&>li+li
 					margin-left: 15px
 
 				.fb
@@ -315,34 +329,45 @@ input[type="submit"], button
 					background-color: #e44c41
 			p:last-child
 				margin-top: 22px
-				span
+				a
+					display: block
+				span, a
 					font-family: "MyriadPro"
 					font-size: 14px
 					line-height: 24px
 					color: #bface2
-				.num
+				.tel
 					text-transform: uppercase
 					font-family: $default-font
 		form
-			input
-				background-color: $accent
-				display: inline-block
+			& *
+				font-size: 16px
+				line-height: 24px
+				color: #c1c1c1
 				border-radius: 2px
+				background-color: $accent
+			input
+				display: inline-block
 				width: 270px
 				height: 44px
-				padding: 20px
-				box-sizing: border-box
+				padding: 0 20px 0 20px
 			[name= email]
-				margin-left: 29px
-			[type= textarea]
+				margin-left: 25px
+			textarea
 				display: block
-				margin-top: 30px
-				width: 572px
-				height: 179px
+				margin:
+					top: 30px
+					bottom: 30px
+				padding: 20px 20px
+			[type= submit]
+				margin-left: 480px
+				background-color: $blue
+				color: $accent
+				width: 170px
+				height: 50px
 
 
 
 
 
 @import "media"
-

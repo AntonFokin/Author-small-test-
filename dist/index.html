@@ -9,7 +9,7 @@
 </head>
 <body>
 	<header id="header">
-		<div class="topline">
+		<div class="topline default">
 			<div class="wrapper clearfix">
 				<div class="logo"><a href="#">Author</a></div>
 
@@ -154,17 +154,17 @@
 				<div class="touch-us">
 					<h3>Get in tuoch with us</h3>
 					<p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry`s</p>
-					<div class="social">
-						<div class="fb"><a href="https://www.facebook.com/anton.fokin.505"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
-						<div class="tw"><a href="https://twitter.com/?lang=ru"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
-						<div class="g"><a href="https://plus.google.com/?hl=ru"><i class="fa fa-google-plus" aria-hidden="true"></i></a></div>
-					</div>
-					<p><span>Posted by Dospel & GanjaParker</span><br><span class= "num">+xx-xxxx - xxxx - xx</span><br><span>info@mail.com</span></p>
+					<ul class="social">
+						<li class="fb"><a href="https://www.facebook.com/anton.fokin.505"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li class="tw"><a href="https://twitter.com/?lang=ru"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li class="g"><a href="https://plus.google.com/?hl=ru"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+					</ul>
+					<p><span>Posted by Dospel & GanjaParker</span><a href="tel: +xx-xxxx - xxxx - xx" class="tel">+xx-xxxx - xxxx - xx</a><a href="email: info@mail.com">info@mail.com</a></p>
 				</div>
 				<form action="#">
-					<input type="text" placeholder="Name" name="name" required>
-					<input type="text" placeholder="Email" name="email" required>
-					<input type="textarea" placeholder="Message" name="message" id="message" required>
+					<input type="text" placeholder="Name" name="name" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" required>
+					<input type="text" placeholder="Email" name="email" pattern="^[A-Za-z0-9][A-Za-z0-9\.-_]*[A-Za-z0-9]*@([A-Za-z0-9]+([A-Za-z0-9-]*[A-Za-z0-9]+)*\.)+[A-Za-z]*$" required>
+					<textarea name="Message" placeholder="Message" id="" cols="64" rows="6"></textarea>
 					<input type="submit" value="SEND">
 				</form>
 			</div>
